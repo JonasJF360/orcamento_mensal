@@ -276,7 +276,7 @@ def abrir_despesas(validacao):
     imprecao_personalizada(valor_a, valor_b)
     print('\n01 - Editar valores',
           '\n02 - Adicionas despesa',
-          '\n03 - Apagar uma despesa'
+          '\n03 - Apagar uma despesa',
           '\n00 - Voltar')
     opcoes = input('## : ')
     if opcoes == '1':
