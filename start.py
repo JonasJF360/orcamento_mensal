@@ -6,15 +6,15 @@ data_hora = datetime.now()
 DATA_HOJE = data_hora.strftime('%d/%m/%Y')
 
 # Configuracões para Windows e Linux
-DIRETORIO =  str(__file__).replace('start.py','') + 'db/'
-
-if not os.path.exists(DIRETORIO):
-    os.makedirs(DIRETORIO)
-
 if str(platform.system()) == 'Linux':
     LIMPAR_TELA = 'clear'
-else:
+    DIRETORIO =  str(__file__).replace('start.py','') + 'db/'
+else:  # O contrário foi pensado no Windows
     LIMPAR_TELA = 'cls'
+    DIRETORIO =  str(__file__).replace('start.py','') + 'db\\'
+
+if not os.path.exists(DIRETORIO): # Cria o diretório caso ainda não exista
+    os.makedirs(DIRETORIO)
 
 # Opções de cadastro
 import arquivos as OpArquivo
